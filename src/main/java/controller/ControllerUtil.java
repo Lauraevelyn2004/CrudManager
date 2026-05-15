@@ -13,14 +13,19 @@ public class ControllerUtil {
 	private static int ERROR = 0;
 	private static int SUCESS = 1;
 	
-	static void forward(HttpServletRequest req, HttpServletResponse resp, String target) throws ServletException, IOException {
+	static void forward(HttpServletRequest req, 
+			HttpServletResponse resp, String target) 
+					throws ServletException, IOException {
+		
 		RequestDispatcher dispatcher = req
 	            .getRequestDispatcher(target);
 		
 	    dispatcher.forward(req, resp);
 	}
 	
-	static void redirect(HttpServletResponse resp, String target) throws IOException {
+	static void redirect(HttpServletResponse resp, String target) 
+			throws IOException {
+		
 		resp.sendRedirect(target);
 	}
 
