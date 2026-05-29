@@ -32,7 +32,7 @@
 			    </div>
 			 
 			    <div class="col-md-3">
-			        <a href="/crud-manager/company/form" class="btn btn-danger pull-right h2"><span class="glyphicon glyphicon-plus" /></span>&nbspAdicionar Empresa</a>
+			        <a href="/crud-manager/company/form" class="btn btn-danger pull-right h2"><span class="glyphicon glyphicon-plus"></span>&nbspAdicionar Empresa</a>
 			    </div>
 	     	</div>
 	 
@@ -42,14 +42,13 @@
 	     		<div class="table-responsive col-md-12">
 			        <table class="table table-striped table-hover" cellspacing="0" cellpadding="0">
 			            <thead>
-			                <!-- AQUI listar os dados -->
 			                <tr>
 			                    <th>Nome</th>
 			                    <th>Sexo</th>
 			                    <th>E-mail</th>
 			                    <th>Editar</th>
 			                    <th>Excluir</th>
-			                 </tr>
+			                </tr>
 			            </thead>
 			            <tbody>
 			            	<c:forEach var="user" items="${users}">
@@ -86,13 +85,12 @@
 			            <li><a href="#">2</a></li>
 			            <li><a href="#">3</a></li>
 			            <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
-			        </ul><!-- /.pagination -->
-			    </div>
+			        </ul></div>
 	     	</div>
 		</div>
 		
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() {
 			    // fecha o alert após 3 segundos

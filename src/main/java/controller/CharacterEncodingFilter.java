@@ -21,9 +21,12 @@ public class CharacterEncodingFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
             throws IOException, ServletException {
+        // Define a codificação da requisição
         servletRequest.setCharacterEncoding("UTF-8");
-        servletResponse.setContentType("charset=UTF-8");
+        
+        // Define APENAS a codificação da resposta, sem destruir o MIME Type (CSS/JS)
         servletResponse.setCharacterEncoding("UTF-8");
+        
         filterChain.doFilter(servletRequest, servletResponse);
     }
 
